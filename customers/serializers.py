@@ -8,4 +8,4 @@ class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
         model = Customer
-        fields = ('id', 'first_name', 'last_name', 'email','gender','company','title')
+        fields = ('id', 'first_name', 'last_name', 'email','gender','company','title','longitude','latitude')

@@ -7,8 +7,7 @@ from customers.models import Customer
 class ModelTestCase(TestCase):
 
     def setUp(self):
-        self.customer_name = "Kou"
-        self.customer = Customer(name=self.customer_name)
+         self.customer = Customer(first_name='kou')
 
     def test_model_can_create_a_customer(self):
         old_count = Customer.objects.count()
