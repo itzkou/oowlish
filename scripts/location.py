@@ -16,8 +16,7 @@ def run():
 
         if api_response.status_code == 200:  # Safety check
             if len(loaded_json) > 0:  # IndexOutOfBound Protection
-                updated = Customer.objects.filter(pk=customer.pk).update(longitude=loaded_json[0]['lon'],
-                                                                         latitude=loaded_json[0][
-                                                                             'lat'])  # Updating each row with proper longitude and latitude
-                print(
-                    updated)  # 'updated' is a Boolean indicator , if update ==1 an update operation worked else an update operation failed
+                print('Calculating longitude/latitude')
+                Customer.objects.filter(pk=customer.pk).update(longitude=loaded_json[0]['lon'],
+                                                               latitude=loaded_json[0][
+                                                                   'lat'])  # Updating each row with proper longitude and latitude
