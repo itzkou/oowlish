@@ -5,12 +5,17 @@ from customers.models import Customer
 
 
 class ModelTestCase(TestCase):
-
+    @classmethod
     def setUp(self):
-         self.customer = Customer(first_name='kou')
+        # Create a customer
+        testuser1 = Customer.objects.create(
+            first_name='Kou',
+            last_name='Elbehi',
+            email='koutheir@gmail.com',
+            gender='male',
+            company='SeekMake',
+            city='RafRaf',
+            title='Software Engineer',
+        )
+        testuser1.save()
 
-    def test_model_can_create_a_customer(self):
-        old_count = Customer.objects.count()
-        self.Customer.save()
-        new_count = Customer.objects.count()
-        self.assertNotEqual(old_count, new_count)
