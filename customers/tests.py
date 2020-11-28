@@ -14,7 +14,7 @@ class ModelTestCase(TestCase):
             last_name='Elbehi',
             email='koutheir@gmail.com',
             gender='male',
-            company='SeekMake',
+            company='SeekMake.co',
             city='RafRaf',
             title='Software Engineer',
         )
