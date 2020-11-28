@@ -5,6 +5,7 @@ from customers.models import Customer
 
 
 class ModelTestCase(TestCase):
+
     @classmethod
     def setUp(self):
         # Create a customer
